@@ -1,6 +1,6 @@
 # Lando LAMP Plugin
 
-The Lando LAMP plugin service.
+The Lando LAMP plugin recipe.
 
 ## Installation
 
