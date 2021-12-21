@@ -58,7 +58,7 @@ jobs:
       - name: Verify Lando works and we are dogfooding this plugin for tests
         run: |
           lando version
-          lando config --path plugins | grep mariadb | grep /home/runner/work/mariadb/mariadb || echo "::error:: Not dogfooding this plugin correctly! "
+          lando config --path plugins | grep lamp | grep /home/runner/work/lamp/lamp || echo "::error:: Not dogfooding this plugin correctly! "
 
       # This block should eventually become use lando/actions-leia@v2
       # @NOTE? Do we want a way for our leia-action to configure apparmor since

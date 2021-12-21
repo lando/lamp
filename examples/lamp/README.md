@@ -17,6 +17,7 @@ lando poweroff
 # Should initialize the latest codeignitor codebase
 rm -rf lamp && mkdir -p lamp && cd lamp
 lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.10.tar.gz --remote-options="--strip-components 1" --recipe lamp --webroot . --name lando-lamp --option composer_version=1.10.1
+echo -e "\nplugins:\n  \"@lando/lamp/\": ./../../" >> .lando.yml
 
 # Should start up successfully
 cd lamp
