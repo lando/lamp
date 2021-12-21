@@ -1,5 +1,8 @@
 'use strict';
 
+// Modules
+const _ = require('lodash');
+
 /*
  * Build LAMP
  */
