@@ -1,6 +1,7 @@
 ---
 title: LAMP Lando Plugin
 description: Use a generic LAMP stack on Lando for local development; powered by Docker and Docker Compose; learn how to config php and apache version, use postgres or mysql or mariadb, composer, xdebug and custom config files, oh and also import and export databases.
+next: ./config.html
 ---
 
 # LAMP
