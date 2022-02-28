@@ -28,7 +28,7 @@ Note that if the above config options are not enough, all Lando recipes can be f
 
 ## Choosing a php version
 
-You can set `php` to any version that is available in our [php service](https://docs.lando.devphp.html). However, you should make sure that whatever framework or custom code you write is designed to work with your choice.
+You can set `php` to any version that is available in our [php service](https://docs.lando.dev/php). However, you should make sure that whatever framework or custom code you write is designed to work with your choice.
 
 The [recipe config](https://docs.lando.dev/config/recipes.html#config) to set the LAMP recipe to use `php` version `5.3` is shown below:
 
@@ -40,7 +40,7 @@ config:
 
 ## Choosing a composer version
 
-You can set `composer_version` to any version that is available in our [php service](https://docs.lando.dev/php.html#installing-composer).
+You can set `composer_version` to any version that is available in our [php service](https://docs.lando.dev/php/config.html#installing-composer).
 
 ```yaml
 recipe: lamp
