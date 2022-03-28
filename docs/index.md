@@ -10,7 +10,7 @@ The [LAMP](https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) stack is a 
 
 Lando offers a configurable [recipe](https://docs.lando.dev/config/recipes.html) for developing [LAMP](https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) apps.
 
-Note that this recipe is for a generic LAMP stack. Definitely check out Lando's [other recipes](https://socs.lando.dev/config/recipes.html) before you use this as there may be one designed specifically for use with your framework.
+Note that this recipe is for a generic LAMP stack. Definitely check out Lando's [other recipes](https://docs.lando.dev/config/recipes.html) before you use this as there may be one designed specifically for use with your framework.
 
 #### Features of this plugin:
 
