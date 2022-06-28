@@ -113,7 +113,7 @@ You may need to override our [default LAMP config](https://github.com/lando/lamp
 
 If you do this, you must use files that exist inside your application and express them relative to your project root as shown below:
 
-Note that the default files may change based on how you set both `ssl` and `via`. Also note that the `vhosts` and `server` config will be explicitly for `apache`. We *highly recommend* you check out the [apache](https://docs.lando.devapache.html#configuration) if you plan to use a custom `vhosts` or `server` config.
+Note that the default files may change based on how you set both `ssl` and `via`. Also note that the `vhosts` and `server` config will be explicitly for `apache`. We *highly recommend* you check out the [apache](https://docs.lando.dev/apache/config.html) if you plan to use a custom `vhosts` or `server` config.
 
 **A hypothetical project**
 
