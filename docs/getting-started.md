@@ -8,9 +8,9 @@ description: Learn how to get started with the Lando LAMP recipe.
 
 Before you get started with this recipe we assume that you have:
 
-1. [Installed Lando](https://socs.lando.dev/basics/installation.html) and gotten familiar with [its basics](https://socs.lando.dev/basics/)
-2. [Initialized](https://socs.lando.dev/basics/init.html) a [Landofile](https://socs.lando.dev/config/lando.html) for your codebase for use with this recipe
-3. Read about the various [services](https://socs.lando.dev/config/services.html), [tooling](https://socs.lando.dev/config/tooling.html), [events](https://socs.lando.dev/config/events.html) and [routing](https://socs.lando.dev/config/proxy.html) Lando offers.
+1. [Installed Lando](https://docs.lando.dev/basics/installation.html) and gotten familiar with [its basics](https://docs.lando.dev/basics/)
+2. [Initialized](https://docs.lando.dev/basics/init.html) a [Landofile](https://docs.lando.dev/config/lando.html) for your codebase for use with this recipe
+3. Read about the various [services](https://docs.lando.dev/config/services.html), [tooling](https://docs.lando.dev/config/tooling.html), [events](https://docs.lando.dev/config/events.html) and [routing](https://docs.lando.dev/config/proxy.html) Lando offers.
 
 ## Quick Start
 
