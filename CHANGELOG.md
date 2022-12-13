@@ -1,3 +1,7 @@
+## v0.7.0 - [December 12, 2022](https://github.com/lando/lamp/releases/tag/v0.7.0)
+  * Added bundle-dependencies to release process.
+  * Fixed bug in plugin dogfooding test.
+
 ## v0.6.0 - [September 8, 2022](https://github.com/lando/lamp/releases/tag/v0.6.0)
 
 ## v0.5.1 - [December 21, 2021](https://github.com/lando/lamp/releases/tag/v0.5.1)
