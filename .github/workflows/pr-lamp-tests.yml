@@ -9,8 +9,8 @@ jobs:
     env:
       TERM: xterm
     strategy:
+      fail-fast: false
       matrix:
-        fail-fast: false
         lando-version:
           - 3-dev
         os:
