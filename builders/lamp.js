@@ -80,9 +80,6 @@ const postgresCli = {
  * Helper to get config defaults
  */
 const getConfigDefaults = options => {
-  // Get the viaconf
-  if (_.startsWith(options.via, 'nginx')) options.defaultFiles.vhosts = 'default.conf.tpl';
-
   // Get the default db conf
   const dbConfig = _.get(options, 'database', 'mysql');
   const database = _.first(dbConfig.split(':'));
@@ -194,7 +191,7 @@ module.exports = {
     xdebug: false,
     proxy: {},
   },
-  builder: (parent, config) => class LandoLaemp extends parent {
+  builder: (parent, config) => class LandoLamp extends parent {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
       // Rebase on top of any default config we might already have
