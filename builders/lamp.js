@@ -209,6 +209,8 @@ module.exports = {
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/postgres/builders/postgres.js'));
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/mongo/builders/mongo.js'));
       const servicePath = path.join(__dirname, '../node_modules/@lando/php/services/php/builder.js');
+      const servicePathResolve = path.resolve(servicePath);
+      console.log(servicePath, servicePathResolve);
       console.log(_.isString(servicePath), fs.existsSync(servicePath), path.basename(servicePath, '.js'));
 
       options = _.merge({}, config, options);
