@@ -211,6 +211,11 @@ module.exports = {
       const servicePath = path.join(__dirname, '../node_modules/@lando/php/services/php/builder.js');
       const servicePathResolve = path.resolve(servicePath);
       console.log(servicePath, servicePathResolve);
+      fs.readdir('/home/runner/.lando/plugins/@lando/lamp/node_modules', (err, files) => {
+        files.forEach(file => {
+          console.log(file);
+        });
+      });
       console.log(_.isString(servicePath), fs.existsSync(servicePath), path.basename(servicePath, '.js'));
 
       options = _.merge({}, config, options);
