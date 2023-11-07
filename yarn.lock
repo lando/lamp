@@ -496,18 +496,11 @@
   dependencies:
     lodash "^4.17.21"
 
-"@lando/nginx@0.9.0":
+"@lando/php@0.9.0":
   version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@lando/nginx/-/nginx-0.9.0.tgz#527b68ce5e0b7eb62e69f7426660174adab0e33e"
-  integrity sha512-b+2owYglucsRSGX6Hl63nudzs3UD+v6Wm7Os2KAYbAL/4nIEe0IjpAnQG71lLkwSbms4fU4xCfKHYorS9UKd0w==
+  resolved "https://registry.yarnpkg.com/@lando/php/-/php-0.9.0.tgz#1edf1d1c1a235321302dcc1bed6c71c6c4ad894f"
+  integrity sha512-h8oJqgi1SF3NJblrpNqjyxzAcfoy5tcphHy8FNdNH2USD4Wn9Y73M9ohY8uRaNBXff6Zzmy46tBdlFNifyx5TA==
   dependencies:
-    lodash "^4.17.21"
-
-"@lando/php@https://github.com/lando/php#66-remove-multiviews":
-  version "0.9.0"
-  resolved "https://github.com/lando/php#2b90dab023cd2d39141f1fb4335824074657038a"
-  dependencies:
-    "@lando/nginx" "0.9.0"
     lodash "^4.17.21"
     semver "^7.3.7"
 
