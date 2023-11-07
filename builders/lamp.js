@@ -208,7 +208,8 @@ module.exports = {
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/mysql/builders/mysql.js'));
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/postgres/builders/postgres.js'));
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/mongo/builders/mongo.js'));
-      console.log(lando.factory.get());
+      const servicePath = path.join(__dirname, '../node_modules/@lando/php/services/php/builder.js');
+      console.log(_.isString(servicePath), fs.existsSync(servicePath), path.basename(servicePath, '.js'));
 
       options = _.merge({}, config, options);
       // Rebase on top of any default config we might already have
