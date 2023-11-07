@@ -108,6 +108,17 @@ const getConfigDefaults = options => {
  * Helper to get services
  */
 const getServices = options => ({
+  database: {
+    config: getServiceConfig(options, ['database']),
+    authentication: 'mysql_native_password',
+    type: options.database,
+    portforward: true,
+    creds: {
+      user: options.recipe,
+      password: options.recipe,
+      database: options.recipe,
+    },
+  },
   appserver: {
     build_as_root_internal: options.build_root,
     build_internal: options.build,
@@ -120,17 +131,6 @@ const getServices = options => ({
     via: options.via,
     xdebug: options.xdebug,
     webroot: options.webroot,
-  },
-  database: {
-    config: getServiceConfig(options, ['database']),
-    authentication: 'mysql_native_password',
-    type: options.database,
-    portforward: true,
-    creds: {
-      user: options.recipe,
-      password: options.recipe,
-      database: options.recipe,
-    },
   },
 });
 
