@@ -194,10 +194,11 @@ module.exports = {
   },
   builder: (parent, config) => class LandoLamp extends parent {
     constructor(id, options = {}) {
-      const lando =  _.get(options, '_app._lando');
+      const lando = _.get(options, '_app._lando');
       // Traverse registry and remove any services that we have locally
       _.remove(lando.factory.registry, service => {
-        return service.name === 'php' || service.name === 'mysql' || service.name === 'mariadb' || service.name === 'postgres' || service.name === 'mongo';
+        return service.name === 'php' || service.name === 'mysql'
+        || service.name === 'mariadb' || service.name === 'postgres' || service.name === 'mongo';
       });
 
       // Use lando.factory.add to add in our local services (pass in path)
