@@ -474,6 +474,50 @@
     mocha "^5.2.0"
     object-hash "^2.2.0"
 
+"@lando/mariadb@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@lando/mariadb/-/mariadb-0.9.0.tgz#60a0927afaf079f1c8a0c26e970c8a6a4d1cd80c"
+  integrity sha512-umb3HvQWdKD+izExExSKpgVRIw3b48t5kNiguCBKtfWc2NJeHhO+dKda3V3rJSf0ZNaZlT0GsFiobPEUtOFpmA==
+  dependencies:
+    lodash "^4.17.21"
+
+"@lando/mongo@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@lando/mongo/-/mongo-0.9.0.tgz#0cf1920112f3e8d7addb36668086dcf45493bc63"
+  integrity sha512-0KyiYjvZ9gwfHH9X9+dF6yTAkv6HQ2RBaOmlBW1ZN8R7jv7IGdDEFeetWTcnZ1LvRwBkJ8sSVWIfz9qbvZbkgA==
+  dependencies:
+    lodash "^4.17.21"
+    semver "^7.5.4"
+
+"@lando/mysql@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@lando/mysql/-/mysql-0.9.0.tgz#0f967870ac7ac939de80c663bb3902f303c6dd03"
+  integrity sha512-NeEqIxpLTdPmOAUgP4k/OgFHL0j+3vz4HWAaeTQ5QYwY8SdZRwvpWJnsDI5Qm2nw9bvW4wRi6p2tbn+mOx4mZQ==
+  dependencies:
+    lodash "^4.17.21"
+
+"@lando/nginx@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@lando/nginx/-/nginx-0.9.0.tgz#527b68ce5e0b7eb62e69f7426660174adab0e33e"
+  integrity sha512-b+2owYglucsRSGX6Hl63nudzs3UD+v6Wm7Os2KAYbAL/4nIEe0IjpAnQG71lLkwSbms4fU4xCfKHYorS9UKd0w==
+  dependencies:
+    lodash "^4.17.21"
+
+"@lando/php@https://github.com/lando/php#66-remove-multiviews":
+  version "0.9.0"
+  resolved "https://github.com/lando/php#2b90dab023cd2d39141f1fb4335824074657038a"
+  dependencies:
+    "@lando/nginx" "0.9.0"
+    lodash "^4.17.21"
+    semver "^7.3.7"
+
+"@lando/postgres@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@lando/postgres/-/postgres-0.10.0.tgz#eccfd2f3297d6363361abcfa2f37a8cb7d70b9c9"
+  integrity sha512-avPe/8QDPbWYZAt8OZCFv5bzH1gwJcxDD5zZ/MR/Jwk0fuMbijvakIxJQJt+jF4Me6KIxf5CbFEgwNGwAdO4ZA==
+  dependencies:
+    lodash "^4.17.21"
+
 "@lando/vuepress-theme-default-plus@1.0.0-beta.49":
   version "1.0.0-beta.49"
   resolved "https://registry.yarnpkg.com/@lando/vuepress-theme-default-plus/-/vuepress-theme-default-plus-1.0.0-beta.49.tgz#857476a02680845522ff9db06316e6f22143a2a6"
@@ -3762,7 +3806,7 @@ semver@^6.0.0, semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.2.1, semver@^7.3.5, semver@^7.3.8:
+semver@^7.2.1, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==

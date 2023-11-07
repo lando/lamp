@@ -3,6 +3,7 @@
 // Modules
 const _ = require('lodash');
 const fs = require('fs');
+const path = require('path');
 
 // Tooling defaults
 const toolingDefaults = {
@@ -193,6 +194,20 @@ module.exports = {
   },
   builder: (parent, config) => class LandoLamp extends parent {
     constructor(id, options = {}) {
+      const lando =  _.get(options, '_app._lando');
+      // Traverse registry and remove any services that we have locally
+      _.remove(lando.factory.registry, service => {
+        return service.name === 'php' || service.name === 'mysql' || service.name === 'mariadb' || service.name === 'postgres' || service.name === 'mongo';
+      });
+
+      // Use lando.factory.add to add in our local services (pass in path)
+      // @todo: ask Mike if we would have issues with this if we had multiple lando apps running.
+      lando.factory.add(path.join(__dirname, '../node_modules/@lando/php/builders/php.js'));
+      lando.factory.add(path.join(__dirname, '../node_modules/@lando/mariadb/builders/mariadb.js'));
+      lando.factory.add(path.join(__dirname, '../node_modules/@lando/mysql/builders/mysql.js'));
+      lando.factory.add(path.join(__dirname, '../node_modules/@lando/postgres/builders/postgres.js'));
+      lando.factory.add(path.join(__dirname, '../node_modules/@lando/mongo/builders/mongo.js'));
+
       options = _.merge({}, config, options);
       // Rebase on top of any default config we might already have
       options.defaultFiles = _.merge({}, getConfigDefaults(_.cloneDeep(options)), options.defaultFiles);
