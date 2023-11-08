@@ -203,7 +203,7 @@ module.exports = {
 
       // Use lando.factory.add to add in our local services (pass in path)
       // @todo: ask Mike if we would have issues with this if we had multiple lando apps running.
-      lando.factory.add(path.join(__dirname, '../node_modules/@lando/php/services/php/builder.js'));
+      lando.factory.add(path.join(__dirname, '../node_modules/@lando/php/builders/php.js'));
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/mariadb/builders/mariadb.js'));
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/mysql/builders/mysql.js'));
       lando.factory.add(path.join(__dirname, '../node_modules/@lando/postgres/builders/postgres.js'));
