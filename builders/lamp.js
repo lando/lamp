@@ -196,18 +196,30 @@ module.exports = {
     constructor(id, options = {}) {
       const lando = _.get(options, '_app._lando');
       // Traverse registry and remove any services that we have locally
+      const lampServices = ['php', 'mysql', 'mariadb', 'postgres', 'mongo'];
       _.remove(lando.factory.registry, service => {
-        return service.name === 'php' || service.name === 'mysql'
-        || service.name === 'mariadb' || service.name === 'postgres' || service.name === 'mongo';
+        return _.includes(lampServices, service.name);
       });
 
-      // Use lando.factory.add to add in our local services (pass in path)
-      // @todo: ask Mike if we would have issues with this if we had multiple lando apps running.
-      lando.factory.add(path.join(__dirname, '../node_modules/@lando/php/builders/php.js'));
-      lando.factory.add(path.join(__dirname, '../node_modules/@lando/mariadb/builders/mariadb.js'));
-      lando.factory.add(path.join(__dirname, '../node_modules/@lando/mysql/builders/mysql.js'));
-      lando.factory.add(path.join(__dirname, '../node_modules/@lando/postgres/builders/postgres.js'));
-      lando.factory.add(path.join(__dirname, '../node_modules/@lando/mongo/builders/mongo.js'));
+      // Make an array of absolute paths to the plugins we need to add
+      const lampServicesPath = lampServices.map(service => {
+        return path.join(__dirname, `../node_modules/@lando/${service}`);
+      });
+
+      // Loop that array and add each plugin to the registry and move scripts if the folder exists.
+      lampServicesPath.forEach(servicePath => {
+        // Add the plugin to the registry
+        lando.factory.add(path.join(servicePath, 'builders', `${servicePath.split('/').pop()}.js`));
+
+        // Move the script to the conDir and make executable.
+        if (fs.existsSync(path.join(servicePath, 'scripts'))) {
+          const confDir = path.join(lando.config.userConfRoot, 'scripts');
+          const dest = lando.utils.moveConfig(path.join(servicePath, 'scripts'), confDir);
+          lando.utils.makeExecutable(fs.readdirSync(dest), dest);
+          lando.log.debug('automoved scripts from %s to %s and set to mode 755',
+            path.join(servicePath, 'scripts'), confDir);
+        }
+      });
 
       options = _.merge({}, config, options);
       // Rebase on top of any default config we might already have
