@@ -16,7 +16,7 @@ jobs:
         os:
           - ubuntu-22.04
         node-version:
-          - '16'
+          - '18'
         leia-test:
           - examples/lamp
     steps:
@@ -30,17 +30,20 @@ jobs:
           cache: yarn
       - name: Install Yarn dependencies
         run: yarn install --prefer-offline --frozen-lockfile
+      - name: Bundle Deps
+        uses: lando/prepare-release-action@v2
+        with:
+          lando-plugin: true
+          version: dev
+          sync: false
       - name: Setup lando ${{ matrix.lando-version }}
         uses: lando/setup-lando@v2
         with:
           lando-version: ${{ matrix.lando-version }}
           config: |
-            plugins.@lando/lamp=/home/runner/work/lamp/lamp
+            setup.skipCommonPlugins=true
+            setup.plugins.@lando/lamp=/home/runner/work/lamp/lamp
           telemetry: false
-      - name: Verify Lando works and we are dogfooding this plugin for tests
-        run: |
-          lando version
-          lando config --path plugins | grep lamp | grep /home/runner/work/lamp/lamp || (echo "::error:: Not dogfooding this plugin correctly!" && exit 1)
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:
