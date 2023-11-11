@@ -81,6 +81,9 @@ const postgresCli = {
  * Helper to get config defaults
  */
 const getConfigDefaults = options => {
+  // Get the viaconf
+  if (_.startsWith(options.via, 'nginx')) options.defaultFiles.vhosts = 'default.conf.tpl';
+
   // Get the default db conf
   const dbConfig = _.get(options, 'database', 'mysql');
   const database = _.first(dbConfig.split(':'));
@@ -228,7 +231,8 @@ module.exports = {
       options.tooling = _.merge({}, getTooling(options), options.tooling);
       // Switch the proxy if needed
       if (!_.has(options, 'proxyService')) {
-        if (_.startsWith(options.via, 'apache')) options.proxyService = 'appserver';
+        if (_.startsWith(options.via, 'nginx')) options.proxyService = 'appserver_nginx';
+        else if (_.startsWith(options.via, 'apache')) options.proxyService = 'appserver';
       }
       options.proxy = _.set(options.proxy, options.proxyService, [`${options.app}.${options._app._config.domain}`]);
       // Downstream
