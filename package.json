@@ -1,7 +1,7 @@
 {
   "name": "@lando/lamp",
   "description": "A Lando plugin that provides a tight integration with lamp.",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Mike Pirog @pirog",
   "license": "GPL-3.0",
   "repository": "lando/lamp",
@@ -17,6 +17,11 @@
     "node": ">=18.0.0"
   },
   "bundledDependencies": [
+    "@lando/mariadb",
+    "@lando/mongo",
+    "@lando/mysql",
+    "@lando/php",
+    "@lando/postgres",
     "lodash"
   ],
   "lando": {},
