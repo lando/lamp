@@ -119,7 +119,7 @@ const getServices = options => ({
     config: getServiceConfig(options),
     run_as_root_internal: options.run_root,
     ssl: true,
-    type: `php:${options.php}`,
+    type: `lamp-php:${options.php}`,
     via: options.via,
     xdebug: options.xdebug,
     webroot: options.webroot,
@@ -127,7 +127,7 @@ const getServices = options => ({
   database: {
     config: getServiceConfig(options, ['database']),
     authentication: 'mysql_native_password',
-    type: options.database,
+    type: `lamp-${options.database}`,
     portforward: true,
     creds: {
       user: options.recipe,
@@ -197,33 +197,6 @@ module.exports = {
   },
   builder: (parent, config) => class LandoLamp extends parent {
     constructor(id, options = {}) {
-      const lando = _.get(options, '_app._lando');
-      // Traverse registry and remove any services that we have locally
-      const lampServices = ['php', 'mysql', 'mariadb', 'postgres', 'mongo'];
-      _.remove(lando.factory.registry, service => {
-        return _.includes(lampServices, service.name);
-      });
-
-      // Make an array of absolute paths to the plugins we need to add
-      const lampServicesPath = lampServices.map(service => {
-        return path.join(__dirname, `../node_modules/@lando/${service}`);
-      });
-
-      // Loop that array and add each plugin to the registry and move scripts if the folder exists.
-      lampServicesPath.forEach(servicePath => {
-        // Add the plugin to the registry
-        lando.factory.add(path.join(servicePath, 'builders', `${servicePath.split('/').pop()}.js`));
-
-        // Move the script to the conDir and make executable.
-        if (fs.existsSync(path.join(servicePath, 'scripts'))) {
-          const confDir = path.join(lando.config.userConfRoot, 'scripts');
-          const dest = lando.utils.moveConfig(path.join(servicePath, 'scripts'), confDir);
-          lando.utils.makeExecutable(fs.readdirSync(dest), dest);
-          lando.log.debug('automoved scripts from %s to %s and set to mode 755',
-            path.join(servicePath, 'scripts'), confDir);
-        }
-      });
-
       options = _.merge({}, config, options);
       // Rebase on top of any default config we might already have
       options.defaultFiles = _.merge({}, getConfigDefaults(_.cloneDeep(options)), options.defaultFiles);
