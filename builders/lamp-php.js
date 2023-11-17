@@ -2,7 +2,6 @@
 
 const _ = require('lodash');
 const LandoPhp = require('./../node_modules/@lando/php/builders/php.js');
-const path = require('path');
 
 // Builder
 module.exports = {
