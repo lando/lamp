@@ -1,5 +1,9 @@
+## v0.10.0 - [November 21, 2023](https://github.com/lando/lamp/releases/tag/v0.10.0)
+* Updated PHP/Nginx dependencies [#40](https://github.com/lando/lamp/pull/40)
+
+
 ## v0.9.0 - [November 17, 2023](https://github.com/lando/lamp/releases/tag/v0.9.0)
-* Detached LAMP recipe from core _lamp service type.
+* Detached LAMP recipe from core _lamp service type. [#39](https://github.com/lando/lamp/pull/39)
 
 ## v0.8.0 - [July 3, 2023](https://github.com/lando/lamp/releases/tag/v0.8.0)
 * Removed bundle-dependencies and version-bump-prompt from plugin.
