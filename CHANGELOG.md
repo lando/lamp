@@ -1,3 +1,6 @@
+## v0.10.1 - [November 27, 2023](https://github.com/lando/lamp/releases/tag/v0.10.1)
+* Changed our php-nginx service to a lamp-nginx.
+
 ## v0.10.0 - [November 21, 2023](https://github.com/lando/lamp/releases/tag/v0.10.0)
 * Updated PHP/Nginx dependencies [#40](https://github.com/lando/lamp/pull/40)
 
