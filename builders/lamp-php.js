@@ -23,9 +23,10 @@ module.exports = {
   name: 'lamp-php',
   parent: '_appserver',
   builder: (parent, config) => class LampPhp extends LandoPhp.builder(parent, LandoPhp.config) {
-    constructor(id, options = {}) {
+    constructor(id, options = {}, factory) {
       loadScripts(options);
-      super(id, options, {services: _.set({}, options.name)});
+      options.nginxServiceType = 'lamp-nginx';
+      super(id, options, factory);
     };
   },
 };
