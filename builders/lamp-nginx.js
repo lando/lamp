@@ -12,7 +12,7 @@ module.exports = {
   },
   builder: (parent, config) => class LampNginx extends PhpNginx.builder(parent, PhpNginx.config) {
     constructor(id, options = {}) {
-      super(id, options, {services: _.set({}, options.name)});
+      super(id, _.merge({}, config, options), {services: _.set({}, options.name)});
     };
   },
 };
