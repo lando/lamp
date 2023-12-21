@@ -9,7 +9,7 @@ module.exports = {
   parent: '_service',
   builder: (parent, config) => class LampMariadb extends LandoMariadb.builder(parent, LandoMariadb.config) {
     constructor(id, options = {}) {
-      super(id, options, {services: _.set({}, options.name)});
+      super(id, _.merge({}, config, options), {services: _.set({}, options.name)});
     };
   },
 };

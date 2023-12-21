@@ -26,7 +26,7 @@ module.exports = {
     constructor(id, options = {}, factory) {
       loadScripts(options);
       options.nginxServiceType = 'lamp-nginx';
-      super(id, options, factory);
+      super(id, _.merge({}, config, options), factory);
     };
   },
 };

@@ -9,7 +9,7 @@ module.exports = {
   parent: '_service',
   builder: (parent, config) => class LampPostgres extends LandoPostgres.builder(parent, LandoPostgres.config) {
     constructor(id, options = {}) {
-      super(id, options, {services: _.set({}, options.name)});
+      super(id, _.merge({}, config, options), {services: _.set({}, options.name)});
     };
   },
 };
