@@ -18,7 +18,14 @@ jobs:
         node-version:
           - '18'
         leia-test:
-          - examples/lamp
+          - examples/lamp-init
+          - examples/lamp-custom
+          - examples/lamp-defaults
+          - examples/lamp-export
+          - examples/lamp-import
+          - examples/lamp-mysql8
+          - examples/lamp-nginx
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

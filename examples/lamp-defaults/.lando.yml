@@ -1,0 +1,6 @@
+name: lamp-defaults
+recipe: lamp
+
+# do not remove this
+plugins:
+  "@lando/lamp": ../..
