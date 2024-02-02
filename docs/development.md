@@ -5,7 +5,7 @@ description: Learn how to develop and contribute to the Lando Lamp service
 
 # Development
 
-This guide contains information to help onboard developers to work on the [lamp](https://lamp.microsoft.com/en-us/) integration, hereafter referred to as *the plugin*.
+This guide contains information to help onboard developers to work on the [lamp](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) integration, hereafter referred to as *the plugin*.
 
 ## Requirements
 
