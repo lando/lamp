@@ -62,4 +62,4 @@ curl -fsSL -o database.sql.gz "https://url.to.my.db/database.sql.gz"
 lando db-import database.sql.gz
 ```
 
-You can learn more about the `db-import` command [over here](https://socs.lando.dev/guides/db-import.html).
+You can learn more about the `db-import` command [over here](https://docs.lando.dev/guides/db-import.html).
