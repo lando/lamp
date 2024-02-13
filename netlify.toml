@@ -39,9 +39,9 @@
 # We need this so preview environments and the base site look ok on their own
 [[redirects]]
   from = "/"
-  to = "/lamp"
+  to = "/plugins/lamp"
   status = 200
 [[redirects]]
-  from = "/lamp/*"
+  from = "/plugins/lamp/*"
   to = "/:splat"
   status = 200
