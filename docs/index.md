@@ -14,7 +14,7 @@ Note that this recipe is for a generic LAMP stack. Definitely check out Lando's 
 
 #### Features of this plugin:
 
-* Configurable `php` version from `5.3` all the way to `8.1`
+* Configurable `php` version from `5.3` all the way to `8.3`
 * Configurable `webroot`
 * Configurable `apache` web server
 * Configurable database backend (`mariadb`, `mysql`, or `postgres`)

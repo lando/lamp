@@ -185,7 +185,7 @@ module.exports = {
   name: 'lamp',
   parent: '_recipe',
   config: {
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     database: 'mysql',
     defaultFiles: {
     },
