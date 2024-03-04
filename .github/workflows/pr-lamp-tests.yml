@@ -21,6 +21,8 @@ jobs:
           - examples/lamp-init
           - examples/lamp-custom
           - examples/lamp-defaults
+          - examples/lamp-downstreamer-1
+          - examples/lamp-downstreamer-2
           - examples/lamp-export
           - examples/lamp-import
           - examples/lamp-mysql8
