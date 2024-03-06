@@ -1,0 +1,11 @@
+name: lamp-downstreamer-1
+recipe: lamp
+
+services:
+  database:
+    type: mysql:8.0
+
+# do not remove this
+plugins:
+  "@lando/lamp": ../..
+  "@lando/mysql": ../../node_modules/@lando/mysql
