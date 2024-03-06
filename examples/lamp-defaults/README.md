@@ -52,7 +52,7 @@ lando mysql lamp -e quit
 
 # Should use the correct default config files
 lando ssh -s appserver -c "cat /usr/local/etc/php/conf.d/zzz-lando-my-custom.ini" | grep "; LANDOLAMPPHPINI"
-lando ssh -s appserver_nginx -c "curl -L http://localhost/info.php" | grep max_execution_time | grep 91
+lando ssh -s appserver -c "curl -L http://localhost/info.php" | grep max_execution_time | grep 91
 lando ssh -s database -c "cat /opt/bitnami/mysql/conf/my_custom.cnf" | grep "LANDOLAMPMYSQLCNF"
 lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 121
 
