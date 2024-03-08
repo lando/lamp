@@ -1,3 +1,6 @@
+## v1.3.0 - [March 8, 2024](https://github.com/lando/lamp/releases/tag/v1.3.0)
+  * Updated to latest database services.
+
 ## v1.2.1 - [March 6, 2024](https://github.com/lando/lamp/releases/tag/v1.2.1)
 
 ### Fixes
