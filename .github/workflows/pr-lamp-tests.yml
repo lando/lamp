@@ -25,6 +25,8 @@ jobs:
           - examples/lamp-downstreamer-2
           - examples/lamp-export
           - examples/lamp-import
+          - examples/lamp-mariadb
+          - examples/lamp-mariadb-mysql
           - examples/lamp-mysql8
           - examples/lamp-nginx
 

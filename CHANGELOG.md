@@ -1,11 +1,18 @@
+## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
+
+* Updated mariadb plugin [#51](https://github.com/lando/symfony/pull/51)
+* Use mysql command for MariaDB 10.3.x and below
+* Cleaned up test comments
+
 ## v1.3.0 - [March 8, 2024](https://github.com/lando/lamp/releases/tag/v1.3.0)
-  * Updated to latest database services.
+
+* Updated to latest database services.
 
 ## v1.2.1 - [March 6, 2024](https://github.com/lando/lamp/releases/tag/v1.2.1)
 
 ### Fixes
 
-* Improved `database` selection for purposes of `config` loading, fixes some `database` bootup issues when the `database` type is overriden downstream
+* Improved `database` selection for purposes of `config` loading, fixes some `database` bootup issues when the `database` type is overridden downstream
 
 ### Internal
 
