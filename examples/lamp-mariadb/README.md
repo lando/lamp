@@ -1,4 +1,4 @@
-LAMP MySQL 8 Example
+LAMP MariaDB Example
 ====================
 
 This example exists primarily to test the following documentation:
@@ -15,12 +15,12 @@ Run the following commands to get up and running with this example.
 lando poweroff
 
 # Initialize an empty lamp recipe
-rm -rf mysql8 && mkdir -p mysql8 && cd mysql8
-lando init --source cwd --recipe lamp --webroot app/public --name lando-lamp-mysql8 --option php='8.1' --option database=mysql:8.0.22
+rm -rf mariadb && mkdir -p mariadb && cd mariadb
+lando init --source cwd --recipe lamp --webroot app/public --name lando-lamp-mariadb --option php=8.3 --option database=mariadb:11.3
 cp -f ../../.lando.local.yml .lando.local.yml && cat .lando.local.yml
 
 # Should start up successfully
-cd mysql8
+cd mariadb
 lando start
 ```
 
@@ -30,29 +30,29 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 8.1 as the default php version
-cd mysql8
-lando php -v | grep "PHP 8.1"
+# Should use 8.3 as the default php version
+cd mariadb
+lando php -v | grep "PHP 8.3"
 
 # Should be running apache 2.4 by default
-cd mysql8
+cd mariadb
 lando ssh -s appserver -c "apachectl -V | grep 2.4"
 lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
 
-# Should be running mysql 8.0.x by default
-cd mysql8
-lando mysql -V | grep 8.0
+# Should be running mariadb 11.3.x by default
+cd mariadb
+lando mariadb -V | grep 11.3.
 
 # Should not enable xdebug by default
-cd mysql8
+cd mariadb
 lando php -m | grep xdebug || echo $? | grep 1
 
 # Should use the default database connection info
-cd mysql8
-lando mysql -ulamp -plamp lamp -e quit
+cd mariadb
+lando mariadb -ulamp -plamp lamp -e quit
 
 # Should have artisan available
-cd mysql8
+cd mariadb
 lando artisan env
 ```
 
@@ -63,7 +63,7 @@ Run the following commands to trash this app like nothing ever happened.
 
 ```bash
 # Should be destroyed with success
-cd mysql8
+cd mariadb
 lando destroy -y
 lando poweroff
 ```
