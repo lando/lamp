@@ -5,8 +5,7 @@ This example exists primarily to test the following documentation:
 
 * [LAMP Recipe](https://docs.devwithlando.io/tutorials/lamp.html)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -17,15 +16,14 @@ lando poweroff
 # Initialize an empty lamp recipe
 rm -rf mariadb && mkdir -p mariadb && cd mariadb
 lando init --source cwd --recipe lamp --webroot app/public --name lando-lamp-mariadb --option php=8.3 --option database=mariadb:11.3
-cp -f ../../.lando.local.yml .lando.local.yml && cat .lando.local.yml
+cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
 cd mariadb
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
@@ -36,8 +34,8 @@ lando php -v | grep "PHP 8.3"
 
 # Should be running apache 2.4 by default
 cd mariadb
-lando ssh -s appserver -c "apachectl -V | grep 2.4"
-lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
+lando exec appserver -- apachectl -V | grep 2.4
+lando exec appserver -- curl -IL localhost | grep Server | grep 2.4
 
 # Should be running mariadb 11.3.x by default
 cd mariadb
@@ -56,8 +54,7 @@ cd mariadb
 lando artisan env
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 
