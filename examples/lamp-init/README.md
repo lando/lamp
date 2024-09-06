@@ -56,14 +56,14 @@ lando mysql -ulamp -plamp lamp -e quit
 # Should be able to global require a composer dep
 cd lamp
 lando composer global require phpunit/phpunit
-lando exec appserver -- phpunit --version"
-lando exec appserver -- which phpunit | grep /var/www/"
+lando exec appserver -- phpunit --version
+lando exec appserver -- which phpunit | grep /var/www/
 
 # Should be able to require a composer dep
 cd lamp
 lando composer require phpunit/phpunit
-lando exec appserver -- phpunit --version"
-lando exec appserver -- which phpunit | grep /app"
+lando exec appserver -- phpunit --version
+lando exec appserver -- which phpunit | grep /app
 
 # Should be able to configure via the config key
 # This tests the 'How do I configure a Lando Recipe' guide.
@@ -73,7 +73,7 @@ cp .lando.yml orig.lando.yml
 cp ../config.lando.yml .lando.yml
 lando rebuild -y
 lando php -v |grep "5.6"
-lando exec database -- mysql --version" |grep "10.3"
+lando exec database -- mysql --version | grep "10.3"
 lando poweroff
 mv orig.lando.yml .lando.yml
 ```
