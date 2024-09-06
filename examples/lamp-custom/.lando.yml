@@ -1,4 +1,7 @@
 name: lamp-custom
+proxy:
+  appserver_nginx:
+    - another.lamp-custom.lndo.site
 recipe: lamp
 config:
   php: '8.3'

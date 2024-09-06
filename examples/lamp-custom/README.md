@@ -1,4 +1,4 @@
-# LAMP Custom 8Example
+# LAMP Custom Example
 
 This example exists primarily to test the following documentation:
 
@@ -52,6 +52,10 @@ lando mysql lamp -e quit
 
 # Should have xdebug enabled
 lando php -m | grep Xdebug
+
+# Should have proxy urls present in lando info
+lando info | grep "http://lamp-custom.lndo.site"
+lando info | grep "http://another.lamp-custom.lndo.site"
 
 # Should be using custom config files
 lando ssh -s appserver -c "curl -L appserver_nginx/info.php" | grep max_execution_time | grep 92
