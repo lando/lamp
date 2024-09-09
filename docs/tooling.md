@@ -7,7 +7,7 @@ description: Learn about Lando LAMP tooling commands like composer, php, mysql, 
 
 By default, each Lando LAMP recipe will also ship with helpful dev utilities.
 
-This means you can use things like `drush`, `composer` and `php` via Lando and avoid mucking up your actual computer trying to manage `php` versions and tooling.
+This means you can use things like `mysql`, `composer` and `php` via Lando and avoid mucking up your actual computer trying to manage `php` versions and tooling.
 
 ```bash
 lando composer          Runs composer commands
@@ -20,10 +20,10 @@ lando php               Runs php commands
 **Usage examples**
 
 ```bash
-# Download a dependency with drush
+# Download a dependency with composer
 lando composer require phpunit/phpunit --dev
 
-# Run composer tests
+# Import a database from a dump file
 lando db-import dump.sql.gz
 
 # Drop into a mysql shell
