@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.8.0 - [December 7, 2024](https://github.com/lando/lamp/releases/tag/v1.8.0)
+
 * Optimized for `midcore`
 * Updated to [@lando/mariadb@1.6.3](https://github.com/lando/mariadb/releases/tag/v1.6.3).
 * Updated to [@lando/mongo@1.2.3](https://github.com/lando/mongo/releases/tag/v1.2.3).
