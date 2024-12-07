@@ -28,7 +28,7 @@ lando start
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should return the drupal installation page by default
+# Should return the CodeIgniter installation page by default
 cd lamp
 lando exec appserver -- curl -L localhost | grep "CodeIgniter"
 
