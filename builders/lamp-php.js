@@ -27,6 +27,6 @@ module.exports = {
       loadScripts(options);
       options.nginxServiceType = 'lamp-nginx';
       super(id, _.merge({}, config, options), factory);
-    };
+    }
   },
 };

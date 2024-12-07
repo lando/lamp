@@ -1,5 +1,4 @@
-LAMP MariaDB Example
-====================
+# LAMP MariaDB Example
 
 This example exists primarily to test the following documentation:
 

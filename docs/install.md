@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: How to install the Lando Lamp Plugin.
+description: How to install the Lando LAMP Plugin.
 ---
 
 # Installation

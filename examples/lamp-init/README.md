@@ -1,5 +1,4 @@
-LAMP Example
-============
+# LAMP Init Example
 
 This example exists primarily to test the following documentation:
 
@@ -16,10 +15,10 @@ lando poweroff
 # Should initialize the latest codeignitor codebase
 rm -rf lamp && mkdir -p lamp && cd lamp
 lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lamp --webroot . --name lando-lamp --option composer_version=1.10.1
-cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
 cd lamp
+cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 lando start
 ```
 
@@ -28,7 +27,7 @@ lando start
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should return the drupal installation page by default
+# Should return the CodeIgniter installation page by default
 cd lamp
 lando exec appserver -- curl -L localhost | grep "CodeIgniter"
 
