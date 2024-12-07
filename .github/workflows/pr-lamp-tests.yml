@@ -19,16 +19,16 @@ jobs:
           - '20'
         leia-test:
           - examples/lamp-init
-          # - examples/lamp-custom
-          # - examples/lamp-defaults
-          # - examples/lamp-downstreamer-1
-          # - examples/lamp-downstreamer-2
-          # - examples/lamp-export
-          # - examples/lamp-import
-          # - examples/lamp-mariadb
-          # - examples/lamp-mariadb-mysql
-          # - examples/lamp-mysql8
-          # - examples/lamp-nginx
+          - examples/lamp-custom
+          - examples/lamp-defaults
+          - examples/lamp-downstreamer-1
+          - examples/lamp-downstreamer-2
+          - examples/lamp-export
+          - examples/lamp-import
+          - examples/lamp-mariadb
+          - examples/lamp-mariadb-mysql
+          - examples/lamp-mysql8
+          - examples/lamp-nginx
 
     steps:
       - name: Checkout code
@@ -55,16 +55,10 @@ jobs:
             setup.skipCommonPlugins=true
             setup.plugins.@lando/lamp=/home/runner/work/lamp/lamp
           telemetry: false
-      - name: DEBUG
-        run: |
-          cd examples/lamp-init
-          rm -rf lamp && mkdir -p lamp && cd lamp
-          lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lamp --webroot . --name lando-lamp --option composer_version=1.10.1 --debug
-
-      # - name: Run Leia Tests
-      #   uses: lando/run-leia-action@v2
-      #   with:
-      #     leia-test: "./${{ matrix.leia-test }}/README.md"
-      #     cleanup-header: "Destroy tests"
-      #     shell: bash
-      #     stdin: true
+      - name: Run Leia Tests
+        uses: lando/run-leia-action@v2
+        with:
+          leia-test: "./${{ matrix.leia-test }}/README.md"
+          cleanup-header: "Destroy tests"
+          shell: bash
+          stdin: true

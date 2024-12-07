@@ -1,5 +1,4 @@
-LAMP MySQL 8 Example
-====================
+# LAMP MySQL 8 Example
 
 This example exists primarily to test the following documentation:
 

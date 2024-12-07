@@ -1,5 +1,4 @@
-LAMP Example
-============
+# LAMP Init Example
 
 This example exists primarily to test the following documentation:
 
