@@ -8,8 +8,8 @@ const {name, version} = require('../../package.json');
 const landoPlugin = name.replace('@lando/', '');
 
 export default defineConfig({
-  title: 'Lando Lamp Plugin',
-  description: 'The offical Lando plugin for Lamp.',
+  title: 'Lando LAMP Plugin',
+  description: 'The offical Lando plugin for LAMP.',
   landoDocs: 3,
   landoPlugin,
   version,
@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   themeConfig: {
     multiVersionBuild: {
-      satisfies: '>=1.0.0',
+      satisfies: '>=1.7.0',
     },
     sidebar: sidebar(),
   },

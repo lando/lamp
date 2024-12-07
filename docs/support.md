@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-description: Get help and support for the Lando Lamp Plugin
+description: Get help and support for the Lando LAMP Plugin
 ---
 
 # Contact Us

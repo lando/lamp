@@ -10,7 +10,7 @@ title: Team
       Team
     </template>
     <template #lead>
-      We are the people who brought Lamp to Lando.
+      We are the people who brought LAMP to Lando.
     </template>
   </VPLTeamPageTitle>
   <VPLTeamMembers :members="members" size="small"/>
