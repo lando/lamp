@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Removed unneeded `@lando/nginx` dependency
+
 ## v1.8.0 - [December 7, 2024](https://github.com/lando/lamp/releases/tag/v1.8.0)
 
 * Optimized for `midcore`
