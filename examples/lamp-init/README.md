@@ -75,6 +75,14 @@ lando php -v |grep "5.6"
 lando exec database -- mysql --version | grep "10.3"
 lando poweroff
 mv orig.lando.yml .lando.yml
+
+# Should have defaults in .lando.yml
+cd lamp
+cat .lando.yml | grep 'php: "7.4"'
+cat .lando.yml | grep "via: apache"
+cat .lando.yml | grep "xdebug: false"
+cat .lando.yml | grep "webroot: ."
+cat .lando.yml | grep "database: mysql"
 ```
 
 ## Destroy tests
