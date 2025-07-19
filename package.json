@@ -3,7 +3,7 @@
   "description": "A Lando plugin that provides a tight integration with lamp.",
   "version": "1.8.1",
   "author": "Mike Pirog @pirog",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": "lando/lamp",
   "bugs": "https://github.com/lando/lamp/issues/new/choose",
   "homepage": "https://github.com/lando/lamp",
