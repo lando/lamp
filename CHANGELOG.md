@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Added `defaults` to the `init` function.
+
 ## v1.8.1 - [December 9, 2024](https://github.com/lando/lamp/releases/tag/v1.8.1)
 
 * Removed unneeded `@lando/nginx` dependency
