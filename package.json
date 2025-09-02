@@ -1,7 +1,7 @@
 {
   "name": "@lando/lamp",
   "description": "A Lando plugin that provides a tight integration with lamp.",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "author": "Mike Pirog @pirog",
   "license": "MIT",
   "repository": "lando/lamp",
