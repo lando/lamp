@@ -1,7 +1,6 @@
 ---
 title: LAMP Lando Plugin
 description: Use a generic LAMP stack on Lando for local development; powered by Docker and Docker Compose; learn how to config php and apache version, use postgres or mysql or mariadb, composer, xdebug and custom config files, oh and also import and export databases.
-next: ./config.html
 ---
 
 # LAMP
@@ -14,7 +13,7 @@ Note that this recipe is for a generic LAMP stack. Definitely check out Lando's 
 
 #### Features of this plugin:
 
-* Configurable `php` version from `5.3` all the way to `8.3`
+* Configurable `php` version from `5.3` all the way to `8.4`
 * Configurable `webroot`
 * Configurable `apache` web server
 * Configurable database backend (`mariadb`, `mysql`, or `postgres`)
