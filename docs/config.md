@@ -28,7 +28,7 @@ Note that if the above config options are not enough, all Lando recipes can be f
 
 ## Choosing a php version
 
-You can set `php` to any version that is available in our [php service](https://docs.lando.dev/plugins/php). However, you should make sure that whatever framework or custom code you write is designed to work with your choice.
+You can set `php` to any version that is available in our [php service](https://docs.lando.dev/plugins/php/index.html). However, you should make sure that whatever framework or custom code you write is designed to work with your choice.
 
 The [recipe config](https://docs.lando.dev/landofile/recipes.html#config) to set the LAMP recipe to use `php` version `5.3` is shown below:
 
@@ -50,9 +50,9 @@ config:
 
 ## Choosing a database backend
 
-By default, this recipe will use the default version of our [mysql](https://docs.lando.dev/plugins/mysql) service as the database backend but you can also switch this to use [`mariadb`](https://docs.lando.dev/plugins/mariadb) or ['postgres'](https://docs.lando.dev/plugins/postgres) instead. Note that you can also specify a version *as long as it is a version available for use with lando* for either `mysql`, `mariadb` or `postgres`.
+By default, this recipe will use the default version of our [mysql](https://docs.lando.dev/plugins/mysql/index.html) service as the database backend but you can also switch this to use [`mariadb`](https://docs.lando.dev/plugins/mariadb/index.html) or ['postgres'](https://docs.lando.dev/plugins/postgres/index.html) instead. Note that you can also specify a version *as long as it is a version available for use with lando* for either `mysql`, `mariadb` or `postgres`.
 
-If you are unsure about how to configure the `database`, we *highly recommend* you check out the [mysql](https://docs.lando.dev/plugins/mysql), [mariadb](https://docs.lando.dev/plugins/mariadb)and ['postgres'](https://docs.lando.dev/plugins/postgres) services before you change the default.
+If you are unsure about how to configure the `database`, we *highly recommend* you check out the [mysql](https://docs.lando.dev/plugins/mysql/index.html), [mariadb](https://docs.lando.dev/plugins/mariadb/index.html)and ['postgres'](https://docs.lando.dev/plugins/postgres/index.html) services before you change the default.
 
 #### Using MySQL (default)
 

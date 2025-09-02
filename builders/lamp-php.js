@@ -26,6 +26,7 @@ module.exports = {
      * @param {Object} factory - App factory instance
      */
     constructor(id, options = {}, factory) {
+      options.nginxServiceType = 'lamp-nginx';
       super(id, options, factory);
     }
   },
