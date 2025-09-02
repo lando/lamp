@@ -14,7 +14,7 @@ lando poweroff
 
 # Should initialize the latest codeignitor codebase
 rm -rf lamp && mkdir -p lamp && cd lamp
-lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lamp --webroot . --name lando-lamp --option composer_version=1.10.1
+lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lamp --webroot . --name lando-lamp --option composer_version=2.8.11
 
 # Should start up successfully
 cd lamp
@@ -60,7 +60,7 @@ lando exec appserver -- which phpunit | grep /var/www/
 
 # Should be able to require a composer dep
 cd lamp
-lando composer require phpunit/phpunit
+lando composer require phpunit/phpunit --dev
 lando exec appserver -- phpunit --version
 lando exec appserver -- which phpunit | grep /app
 

@@ -6,7 +6,7 @@ recipe: lamp
 config:
   php: '8.3'
   composer_version: '2.0.7'
-  via: nginx:1.17
+  via: nginx:1.29
   webroot: bob
   database: mysql:5.7
   xdebug: true
