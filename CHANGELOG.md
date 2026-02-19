@@ -1,5 +1,18 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.10.0 (unreleased)
+
+* Fixed release workflow to trigger npm publish on `published` event instead of `created`
+* Updated to [@lando/php@^1.10.0](https://github.com/lando/php/releases/tag/v1.10.0)
+* Updated to [@lando/mariadb@1.8.0](https://github.com/lando/mariadb/releases/tag/v1.8.0)
+* Updated to [@lando/postgres@1.6.0](https://github.com/lando/postgres/releases/tag/v1.6.0)
+* Updated to [@lando/argv@1.2.0](https://github.com/lando/argv/releases/tag/v1.2.0)
+* Bumped `actions/setup-node` from 4 to 6
+* Bumped `actions/add-to-project` from 1.0.0 to 1.0.2
+* Updated README with PHP 8.5+ support and maintainers list
+* Added dependabot configuration
+* Various dependency bumps (vite, axios, mdast-util-to-hast)
+
 ## v1.9.0 - [September 2, 2025](https://github.com/lando/lamp/releases/tag/v1.9.0)
 
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
