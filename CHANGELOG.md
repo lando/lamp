@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Updated `@lando/php` to `^1.11.0` for MySQL client auto-detection fix
+
 ## v1.10.0 (unreleased)
 
 * Fixed release workflow to trigger npm publish on `published` event instead of `created`
