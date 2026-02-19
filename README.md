@@ -3,7 +3,7 @@
 This is the _official_ [Lando](https://lando.dev) plugin for [LAMP](https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29). When installed it...
 
 * Allows users to run a `lamp` stack
-* Allows users to configure `php` version from `5.3` all the way to `8.1`
+* Allows users to configure `php` version from `5.3` all the way to `8.5+`
 * Allows users to configure `webroot`
 * Allows users to configure an `apache` web server
 * Allows users to configure database backend to (`mariadb`, `mysql`, or `postgres`)
@@ -42,6 +42,7 @@ We try to log all changes big and small in both [THE CHANGELOG](https://github.c
 
 ## Maintainers
 
+* [@AaronFeledy](https://github.com/AaronFeledy)
 * [@pirog](https://github.com/pirog)
 * [@reynoldsalec](https://github.com/reynoldsalec)
 
