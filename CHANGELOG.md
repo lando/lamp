@@ -1,6 +1,6 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-* Updated to [@lando/php@^1.11.2](https://github.com/lando/php/releases/tag/v1.11.2)
+* Updated to [@lando/php@1.11.2](https://github.com/lando/php/releases/tag/v1.11.2)
 * Updated to [@lando/mariadb@1.8.0](https://github.com/lando/mariadb/releases/tag/v1.8.0)
 * Updated to [@lando/postgres@1.6.0](https://github.com/lando/postgres/releases/tag/v1.6.0)
 * Updated to [@lando/argv@1.2.0](https://github.com/lando/argv/releases/tag/v1.2.0)
