@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Removed `--ansi` flag from composer tooling command to prevent escape codes in redirected output
+
 ## v1.10.0 - [February 26, 2026](https://github.com/lando/lamp/releases/tag/v1.10.0)
 
 * Updated to [@lando/php@1.11.2](https://github.com/lando/php/releases/tag/v1.11.2)
